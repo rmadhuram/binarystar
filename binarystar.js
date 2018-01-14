@@ -1,20 +1,26 @@
 $(function() {
-  $("#slider1").roundSlider({
-    sliderType: "min-range",
-    circleShape: "custom-quarter",
-    min: 4,
-    max: 8,
-    value: 4,
-    startAngle: 45,
-    editableTooltip: false,
-    radius: 300,
-    width: 20,
-    handleShape: "dot",
-    tooltipFormat: "tooltipVal1"
-  });
 
-  function tooltipVal1(args) {
-    return args + ' bits';
+	// n is the number of bits.
+  function generateGroups(n) {
+    var max = 1 << n,
+      groups = [];
+
+    for (var i=0; i<n; i++) {
+      groups[i] = [];
+    }
+
+    for (var i=0; i<max; i++) {
+      for (var group = 0; group < n; group++) {
+        if (i & (1 << group)) {
+          groups[group].push(i);
+        }
+      }
+    }
+
+    return groups;
   }
+
+  console.log(generateGroups(5));
+
 });
 
