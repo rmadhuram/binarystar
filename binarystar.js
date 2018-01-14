@@ -19,8 +19,8 @@ $(function() {
 
     return groups;
   }
-
-  console.log(generateGroups(5));
+  var x = prompt('the number which you want')
+  console.log(generateGroups(x));
 
 });
 
