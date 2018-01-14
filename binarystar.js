@@ -30,7 +30,7 @@ $(function() {
 
     return groups;
   }
-  var x = prompt('the number which you want')
+  var x = prompt('A Number Between 1 and 8')
   console.log(generateGroups(x));
 
 });
