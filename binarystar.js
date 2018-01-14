@@ -3,7 +3,8 @@ $(function() {
 	// n is the number of bits.
   function generateGroups(n) {
     var max = 1 << n,
-      groups = [];
+      groups = [],
+      html = '';
 
     for (var i=0; i<n; i++) {
       groups[i] = [];
@@ -16,6 +17,16 @@ $(function() {
         }
       }
     }
+
+    for (var i=0; i<n; i++) {
+      html += '<div class="row group-' + i + '">';
+      for (var j=0; j<groups[i].length; j++) {
+        html += '<span class="number">' + groups[i][j] + '</span>';
+      }
+      html += '</div>';
+    }
+
+    $('.contents').html(html);
 
     return groups;
   }
