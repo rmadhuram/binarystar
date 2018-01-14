@@ -19,11 +19,17 @@ $(function() {
     }
 
     for (var i=0; i<n; i++) {
-      html += '<div class="row group-' + i + '">';
+      if (i % 2 == 0) {
+        html += '<div class="row">';
+      }
+      html += '<div class="col-sm-6 group-' + i + '">';
       for (var j=0; j<groups[i].length; j++) {
-        html += '<span class="number">' + groups[i][j] + '</span>';
+        html += '<div class="number">' + groups[i][j] + '</div>';
       }
       html += '</div>';
+      if (i % 2 == 1) {
+        html += '</div>'; // row
+      }
     }
 
     $('.contents').html(html);
