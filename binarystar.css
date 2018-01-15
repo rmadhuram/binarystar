@@ -20,6 +20,22 @@
 	text-align: center;
 }
 
+.group {
+	border: 1px dotted #ccc;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+.group-title {
+  display: inline-block;
+	position: absolute;
+	top: -18px;
+	left: 23px;
+	background: #e0f4ff;
+	padding: 0px 15px;
+	font-size: 16px;
+}
+
 body{
  font-family: 'Yanone Kaffeesatz', sans-serif;
  font-size: 32px;
@@ -28,3 +44,5 @@ body{
 .row {
 	margin-bottom: 30px;
 }
+
+
