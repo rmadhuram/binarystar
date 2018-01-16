@@ -45,4 +45,15 @@ body{
 	margin-bottom: 30px;
 }
 
+.header {
+	padding-top: 15px;
+}
+
+.footer {
+  padding-top: 10px;
+  border-top: 1px solid #e0f4ff;
+	color: #aaa;
+	font-size: 12px;
+	font-family: 'arial'
+}
 
