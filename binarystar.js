@@ -1,5 +1,9 @@
 $(function() {
 
+  $(".btn-group :input").on("change",function () {
+		generateGroups($(this).val());
+  });
+
 	// n is the number of bits.
   function generateGroups(n) {
     var max = 1 << n,
@@ -43,8 +47,8 @@ $(function() {
 
     return groups;
   }
-  var x = prompt('the number which you want')
-  console.log(generateGroups(x));
+
+  generateGroups(4);
 
 
 });
